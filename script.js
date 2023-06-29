@@ -20,11 +20,21 @@ function total() {
   else if (op.value === "/") {
     if (res.value !== 0)
       res.value = parseFloat(v1.value) / parseFloat(res.value);
+      else
+      res.value = "Erro!";
   }
 }
 
 function operacao(ope) {
-    v1.value = res.value;
-    op.value = ope;
-    res.value = "0";
+  v1.value = res.value;
+  op.value = ope;
+  res.value = "0";
+}
+
+function separador() {
+  if (res.value.indexOf(",") < 0) res.value = res.value + ",";
+}
+
+function limpar() {
+  res.value = "0";
 }
